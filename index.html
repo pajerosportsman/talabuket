@@ -7,7 +7,10 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="format-detection" content="telephone=no">
    <!-- favicon-->
-
+   <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="telegramform.js"></script>
    <!-- styles main -->
    <link rel="stylesheet" href="style.css?v=5.1">
  <body class="page" id="main">
@@ -18,7 +21,7 @@
      <!-- main -->
      <main class="main">
        <div class="point_block">
-         <img class="point_white" src="images/white_circle.png"> </div>
+         <img class="point_white" src=""> </div>
        <div class="content">
          <div class="centre_block">
            <div class="main_text">
@@ -64,9 +67,47 @@
      <!-- footer -->
      <footer id="footer">
        <div class="links">
-         <span class="button">
-           <a href="#" class="btn appointment" data-modal="w=appointment">Оставить заявку</a>
-         </span>
+         <!-- Button trigger modal -->
+         <a type="button" class="btn appointment" data-toggle="modal" data-target="#exampleModal">
+           Оставить заявку
+         </a>
+         <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Пожалуйста, укажите
+свой телефон и мы с вами свяжемся</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
+           <p class="contact-form__message"></p>
+           <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+             <input name="name" type="text" class="contact-form__input contact-form__input_name" tabindex="0" placeholder="Введите ваше имя">
+           </div>
+           <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+             <input name="phone" type="tel" class="contact-form__input contact-form__input_phone" tabindex="0" placeholder="Введите ваш телефон">
+           </div>
+           <div class="contact-form__input-wrapper">
+             <input type="file" name="file" id="contact-form__input_file" class="contact-form__input contact-form__input_file">
+             <label for="contact-form__input_file" class="contact-form__file-button">
+                <span class="contact-form__file-text"></span>
+             </label>
+           </div>
+           <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"  value="Заявка с сайта">
+           <div class="modal-footer">
+             <div class="presentation">
+             <button type="submit" class="btn btn-primary">Оставить заявку</button>
+           </div>
+           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
          <a href="https://instagram.com/tala.buket?igshid=1k30yyqt77hds" target="_blank">Наши букеты</a>
          <span class="slash">/</span>
          <a href="tel: +79307059171" class="call_phone_1">+7 (930) 705-91-71</a>
@@ -116,5 +157,9 @@
      <!-- /footer -->
    </div>
 </div></div>
-
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body></html>

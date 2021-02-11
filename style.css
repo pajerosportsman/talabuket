@@ -7,11 +7,14 @@ body {
 
 body {
   background-image: url("img/6.png");
-  background-color: aee1e1;
+  background-color: #aee1e1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   margin: 0; }
+  a{
+    color: white;
+  }
 
 .wrapper {
   position: relative;
@@ -436,7 +439,7 @@ button.close {
   border-radius: 0px;
   box-shadow: none;
   border: none;
-  background: transparent; }
+  background: #aee1e1; }
 
 .modal .modal-body {
   border-radius: 0;
